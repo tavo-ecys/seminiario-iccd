@@ -80,13 +80,11 @@
 
 <script>
   function testTheTruth() {
-    var todaysDate = new Date();
-
     testResults('1 is equal to 1', 1 === 1);
     testResults('2 is not equal to 1', 2 !== 1);
     testResults('2 is not equal to 1', 2 === 1);
-    testResults('el nombre TAVo esta en mayusculas', 'TAVo' === changeNameToUppercase('tavo'));
-    testResults('el año es 2018', 2018 === todaysDate.getFullYear());
+    testResults('el nombre esta en mayusculas', 'TAVO' === changeNameToUppercase('tavo'));
+    testResults('el año es 2018', greeting('tavo').indexOf('2018') > -1);
   }
   (function() {
     testTheTruth();
