@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      console.log('document loaded');
+    });
+
+    $(window).on("load", function () {
+      console.log('window loaded');
+    });
+  </script>
+  <meta charset="UTF-8">
+  <title>Sample Library, running on Heroku</title>
+</head>
+<body>
+<h1>Sample Library</h1>
+<div id="library">
+  <h3>Users</h3>
+  <div id="users">
+    <ul>
+      <li>user 1</li>
+      <li>user 2</li>
+    </ul>
+  </div>
+  <div>
+    <h4>User Books</h4>
+    <div id="mybooks">
+      <ul>
+        <li>Book 1</li>
+        <li>Book 2</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="search">
+  <h3>Search</h3>
+</div>
+</body>
+</html>
