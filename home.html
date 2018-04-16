@@ -16,6 +16,7 @@
 </head>
 <body>
 <h1>Seminario CI/DC</h1>
+<span id="greeting"></span>
 <div id="library">
   <h3>Users</h3>
   <div id="users">
@@ -60,7 +61,7 @@
           todaysDate.getFullYear();
     return greetingString;
   }
-  $('#greeting').text(greeting('Pedro'));
+  $('#greeting').text(greeting('Tavo'));
 </script>
 
 <!-- ======================== UNIT-TESTS LOGIC ==================== -->
@@ -79,7 +80,13 @@
 
 <script>
   function testTheTruth() {
+    var todaysDate = new Date();
+
     testResults('1 is equal to 1', 1 === 1);
+    testResults('2 is not equal to 1', 2 !== 1);
+    testResults('2 is not equal to 1', 2 === 1);
+    testResults('el nombre TAVo esta en mayusculas', 'TAVo' === changeNameToUppercase('tavo'));
+    testResults('el año es 2018', 2018 === todaysDate.getFullYear());
   }
   (function() {
     testTheTruth();
